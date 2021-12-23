@@ -25,7 +25,7 @@ const fs = require('fs')
 // default options
 app.use(fileUpload({
     useTempFiles : true,
-    tempFileDir : '/home/container/temp',
+    tempFileDir : __dirname+'/temp',
 uriDecodeFileNames: false,
 uploadTimeout:0,
 limits: { fileSize: 1000 * 1024 * 1024 },
@@ -813,7 +813,7 @@ app.post('/auth/reg', function(request, response) {
     to: request.body.username,
     subject: 'Verify your email',
     text: 'to verify',
-            html: '<a href="https://mediaapi.uk.to/verify?id='+id+'&pass='+password+'">click this link to  verify</a> <br> IGNORE THIS IF YOU ARE NOT TRYING TO REGISTER TO MEDIAAPI'
+            html: '<a href="https://'+req.headers.host+'/verify?id='+id+'&pass='+password+'">click this link to  verify</a> <br> IGNORE THIS IF YOU ARE NOT TRYING TO REGISTER TO MEDIAAPI'
 };
 
 transporter.sendMail(mailOptions, (err, info) => {
