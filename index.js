@@ -592,7 +592,7 @@ The ID invalid, or the file has been deleted
 </body>
 </html>`) }
     else {
-       var stats = fs.statSync("/home/container/uploads/"+db.get(req.query.id))
+       var stats = fs.statSync(__dirname + "/uploads/"+db.get(req.query.id))
 var fileSizeInBytes = stats.size;
 // Convert the file size to megabytes (optional)
 var mb = fileSizeInBytes / (1024*1024);
