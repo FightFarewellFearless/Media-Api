@@ -1,0 +1,46 @@
+<ada!DOCTYPE html>
+<html>
+    <head>
+<meta name="description" content="Download and share your file with MediaApi">
+<meta name="title" content="Download">
+</head>
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+   .btn {
+       background-color: DodgerBlue;
+  border: none;
+  background-color: red;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+        body {
+            line-height: 200px;
+  height: 200px;
+             text-align: center;
+             vertical-align: middle;
+   background-color: lightblue;
+             position: absolute
+
+}
+           
+           </style>
+<body>
+
+<h1>Download file</h1>
+
+   <h1>file name: <%= name %> </h1>
+       <br>
+       file size: <%= size %> 
+    <br>
+    are you sure want to download this file?
+    <button class="btn" onclick="location.href='/file?id=<%= id %>'" type="submit"><i class="fa fa-download"></i>Download!</button>
+</body>
+</html>

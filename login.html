@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        
+<meta name="description" content="Login to start your first uploaded file in MediaApi">
+<meta name="title" content="Login">
+
+        <meta name="viewport" content="initial-scale=1">
+		<meta charset="utf-8">
+		<title>Login to mediaapi</title>
+		<style>
+            body {
+                background-color: lightblue
+                    }
+		.login-form {
+			width: 300px;
+			margin: 0 auto;
+			font-family: Tahoma, Geneva, sans-serif;
+		}
+		.login-form h1 {
+			text-align: center;
+			color: #4d4d4d;
+			font-size: 24px;
+			padding: 20px 0 20px 0;
+		}
+		.login-form input[type="password"],
+		.login-form input[type="text"] {
+			width: 100%;
+			padding: 15px;
+			border: 1px solid #dddddd;
+			margin-bottom: 15px;
+			box-sizing:border-box;
+		}
+		.login-form input[type="submit"] {
+			width: 100%;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="login-form">
+			<h1>Login Form</h1>
+			<form action="auth" method="POST" encType="application/x-www-form-urlencoded">
+				<input type="text" name="username" placeholder="email" required>
+				<input type="password" name="password" id="password" placeholder="Password" required>
+                <input type="checkbox" onclick="myFunction()">Show Password
+  <script>
+     function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}               
+      </script>
+				<input type="submit">
+			</form>
+            <a href="/auth/register">doesn't has account?, register here</a>
+		</div>
+	</body>
+</html>
