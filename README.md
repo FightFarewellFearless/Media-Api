@@ -13,3 +13,23 @@ A: yes
 
 # original website
 [here](https://mediaapi.uk.to)
+
+# How To Install?
+do
+```
+git clone https://github.com/FightFarewellFearless/Media-Api
+```
+then 
+```
+cd Media-Api
+```
+**Intall the required package**
+```
+npm install
+```
+* important!, you need change the port to your server port, or don't change the port if you are on localhost
+
+the last step
+```
+node index.js
+```
