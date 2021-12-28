@@ -25,7 +25,7 @@ cd Media-Api
 ```
 **Intall the required package**
 ```
-npm install express express-session cookie-parser nodemailer body-parser easy-json-database
+npm install express express-session cookie-parser nodemailer body-parser easy-json-database express-fileupload
 ```
 * important!, you need change the port to your server port, or don't change the port if you are on localhost
 
